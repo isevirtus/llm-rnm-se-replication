@@ -69,3 +69,14 @@ The latest revision addresses eight author comments. It preserves the author's d
 The Introduction, Method, Results, Discussion, and Conclusion carry the same interpretation: these results do not support routinely preferring RNM over direct elicitation. The primary accuracy benefit occurred for the RNM-derived Scrum reference, while direct elicitation performed better for Chrome and overall token savings were small. Reference construction provides a compatibility explanation, not a proven sole cause. This does not imply universal superiority for direct elicitation or erase the small complete-table SESSI improvement.
 
 The main paper remains eight pages including all 24 references; the nine-page supplement and original results are unchanged. Both existing-source compilation and Overleaf compilation pass; revised pages were visually checked. Independent review's sole minor clarification was addressed. All 3,161 existing non-paper files remain byte-identical. No new model requests, fits, tests, or substituted results were introduced.
+
+
+## Introduction context, abstract flow, and anchor evaluation (16 October 2026)
+
+The revision addresses three Introduction comments: it explains primary-subset eligibility, introduces the Scrum and Chrome application contexts before their results, and adds the paper roadmap. The Abstract follows the same progression from SE decision needs and limited data through BNs, elicitation cost, RNM and LLMs, the experimental comparison, and findings.
+
+The primary RQ1 endpoint evaluates completion beyond the LLM-elicited anchors. Anchors remain evaluated in the raw-versus-fitted diagnostics and complete-table scores. Fitting uses LLM judgments, not reference probabilities; the revised Method and Results explicitly distinguish these facts. No endpoint or statistical result changed.
+
+The Overleaf main source now inputs sections/abstract.tex directly, eliminating a duplicate embedded abstract that could diverge from author edits. The paper remains eight pages with 24 references, and the nine-page supplement is unchanged. Desktop and Overleaf compilation pass; the revised layout was checked. Independent review found no major issues, and its minor endpoint clarification was incorporated.
+
+All 3,161 existing non-paper files remain byte-identical. No new model requests, fits, statistical tests, or substituted results were introduced.
