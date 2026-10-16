@@ -60,3 +60,12 @@ The published Scrum framework is cited and distinguished from the evaluated XML 
 Both PDFs compile in Overleaf. The existing desktop source compiles, the strict source audit passes with 24 references, and all pages were visually checked. Independent scientific review found no remaining actionable issues after a caption clarification.
 
 All 3,161 existing non-paper files are byte-identical to the preceding delivery. No new experimental model calls, RNM fits, statistical tests, or substituted results were introduced. The original answers, reference CPTs, predictions, test results, token counts, and saved sensitivity analyses are unchanged. The package remains private for author review.
+
+
+## Abstract comments and aligned interpretation (16 October 2026)
+
+The latest revision addresses eight author comments. It preserves the author's data-scarcity motivation, explains how RNM generates rows without asking the LLM for those distributions, names the direct/RNM comparison explicitly, and reports the paired-t versus exact-sign statistical qualification in the Abstract and Conclusion. The fitting diagnostic is explicitly about rows already elicited from the LLM.
+
+The Introduction, Method, Results, Discussion, and Conclusion carry the same interpretation: these results do not support routinely preferring RNM over direct elicitation. The primary accuracy benefit occurred for the RNM-derived Scrum reference, while direct elicitation performed better for Chrome and overall token savings were small. Reference construction provides a compatibility explanation, not a proven sole cause. This does not imply universal superiority for direct elicitation or erase the small complete-table SESSI improvement.
+
+The main paper remains eight pages including all 24 references; the nine-page supplement and original results are unchanged. Both existing-source compilation and Overleaf compilation pass; revised pages were visually checked. Independent review's sole minor clarification was addressed. All 3,161 existing non-paper files remain byte-identical. No new model requests, fits, tests, or substituted results were introduced.
