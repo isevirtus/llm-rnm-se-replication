@@ -31,7 +31,8 @@ Primary TV: Scrum 0.3184 direct versus 0.2761 RNM; Chrome 0.2223 versus 0.2517. 
 
 - `replication-package.zip`: collection kits, saved answers and attempt records, frozen references, fitting/scoring code, protocols, expected results, complete manuscript sources, and validation reports.
 - `paper-source.zip`: editable anonymous ACM manuscript and unchanged official class/style; compile `main.tex` with pdfLaTeX and BibTeX.
-- `seai-paper.pdf`: compiled manuscript for author review.
+- `seai-paper.pdf`: eight-page manuscript, including all 24 references.
+- `seai-supplement.pdf`: expanded methods and supporting results; compile `supplement.tex` from the source archive.
 - `verification.json`: full RNM refit and numerical reproduction result.
 - `manifest.json`: hashes of files inside the replication archive.
 - `SHA256SUMS.txt`: hashes of these top-level delivery files.
@@ -48,58 +49,14 @@ The exported package preserves original answer text and hashes plus operational 
 
 No public artifact, anonymous reviewer access, or third-party redistribution license is asserted. This repository is private for author review. No original publisher PDFs, authentication files, or authoring conversations are included. The manuscript has not been submitted to a conference.
 
-## Revision: offline sensitivity analyses (16 October 2026)
+## Current paper: eight pages (16 October 2026)
 
+The main paper is **8 pages including references**, with a **9-page supplement**. The official ACM class, fonts, margins, and spacing are unchanged. The paper retains all three RQs, the 61-node/seven-BN sample and 25-target primary rationale, eight conditions, the qualitative RAG card and RNM anchor example, two explanatory figures, separate Scrum and Chrome findings, Chrome version and leave-one-node-out summaries, statistical qualifications, token accounting, and a substantive conclusion. All 24 verified references remain cited.
 
-The revised paper adds a uniform baseline, secondary metrics, matched direct-anchor fits, aggregation-family selection by anchor fit, stronger searches, expanded bounds, and reference-informed direction diagnostics. Read `POSTHOC-ANALYSES.md` for the results and reproduction commands; source, saved fitted tables, and verification records are in `posthoc-20261016/` inside the archive. `paper/supplement.tex` contains full procedures, example distributions, qualitative cards, and node-level effects.
+The supplement carries the detailed RNM equations and parameterizations, numerical reconstruction and fitting settings, retrieval scoring, secondary metrics, alternative-fit and direction diagnostics, per-node results, complete condition means, and statistical tables. Main-text pointers identify these supporting details. Related-work and introductory repetition was shortened while preserving the comparative table and explanation-first narrative.
 
-The Scrum benefit and Chrome disadvantage persist across the saved-response alternatives. Complete-reference searches are in-sample best-found approximations, not validated predictions, global optima, or RNM error floors. The revised interpretation concerns the tested pipeline.
+The published Scrum framework is cited and distinguished from the evaluated XML implementation. The raw-versus-fitted and worked-row figures are reproducible with `paper/generate_figures.py`; figure values are unchanged. Offline sensitivity and node-influence analyses remain in their separate directories. See `POSTHOC-ANALYSES.md` and `NODE-INFLUENCE.md` for their reproduction commands and limits. The current paper supersedes earlier longer drafts.
 
-All 3,129 protected original evidence and collection files remain byte-identical. No new LLM calls were made. The original predictions, reference CPTs, statistical tests, and token totals are unchanged. `posthoc-verification.json` documents preservation and checks; `validation/revision-20261016-reproduction.json` inside the package records another successful reproduction of all original trial scores and statistical contrasts. The original `verification.json` remains the earlier full-refit validation record.
+Both PDFs compile in Overleaf. The existing desktop source compiles, the strict source audit passes with 24 references, and all pages were visually checked. Independent scientific review found no remaining actionable issues after a caption clarification.
 
-These additions are explicitly post hoc and descriptive; no new p-values or collection-cost totals are substituted. The package remains evaluator-only and the repository remains private for author review.
-
-## Revision: Chrome versions and leave-one-node-out checks (16 October 2026)
-
-
-The main paper now reports Chrome 40 and Chrome 42 separately and summarizes all 25 single-target omission checks. The six-page supplement contains the version means, complete omission tables, and aggregation details. See `NODE-INFLUENCE.md` for the portable reproduction command and interpretation.
-
-Chrome 40's primary RNM-minus-direct TV is +0.0033, compared with +0.0556 for Chrome 42. Every omission preserves the original direction in all five blocks: Scrum remains favorable to RNM and Chrome unfavorable. The results are descriptive post-hoc influence diagnostics, not significance tests, cross-validation, or a revised sample. All original predictions, reference tables, statistical tests, and token totals are unchanged; no new model calls or fitting were performed for this revision.
-
-The archive includes `posthoc-node-influence-20261016/analyze.py`, all 125 omission/block records, 25 omission summaries, 15 network/block records, network means, input hashes, and verification outputs. The paper and supplement compile; the official template remains unchanged. Newer author edits to the abstract were preserved.
-
-
-## Revision: motivation, scope, and terminology (16 October 2026)
-
-The Abstract preserves the author's opening and clarifies the relationship between the 61-node/seven-BN sample and the 25 multi-parent primary targets. Application areas introduce the reference contrasts. The Introduction now moves from transparency and limited data in SE decisions to BNs, CPT-construction cost, semi-automatic methods, LLM elicitation, and the study's three RQs. Seven verified references were added; the cited WSA/RNM comparison is explicitly a preprint. BN/BNs and RAG are used consistently after definition.
-
-This is a prose and bibliography revision only. All non-paper replication artifacts remain byte-identical to the previous delivery, including original results and both post-hoc analysis directories. The official LaTeX template is unchanged. The expanded author-review paper is nine pages (including references), with a six-page supplement; an eight-page submission target still requires a separate condensation pass. No new model calls, fits, or inferential tests were performed.
-
-
-## Revision: related-work comparison (16 October 2026)
-
-Section 2 now compares five LLM-assisted BN studies with this experiment in Table 1. The table distinguishes elicitation granularity, numerical versus qualitative evidence, evaluation materials, and numerical CPT agreement versus modeling/usability or downstream endpoints. The accompanying synthesis positions the study as a comparison of sparse LLM anchors plus RNM reconstruction against complete-table elicitation, together with prompt/RAG treatments and computational effort. It acknowledges prior LLM-plus-fitting approaches. The virtual-survey reference is explicitly identified as a preprint.
-
-Independent review resolved three scope clarifications. The paper compiles successfully and its table and page flow were visually inspected. The author-review paper is 10 pages including references; the unchanged supplement is 7 pages. The eight-page target still requires a separate condensation pass. The official template, author-edited abstract, and all other substantive sections are unchanged.
-
-All 3,161 non-paper replication files remain byte-identical to the preceding delivery. Original collection, responses, CPTs, statistical analyses, token totals, and offline sensitivity analyses are unchanged. No new model calls, fits, or statistical tests were performed.
-
-
-## Revision: explained results and published Scrum provenance (16 October 2026)
-
-The Results now follow the three research questions through the method contrast, prompting and qualitative RAG, and token accounting. Two vector figures show replication-level effects and anchor fitting, followed by explained Cohesion and Major Contributors CPT examples. The examples are explicitly selected contrasting illustrations, not representative cases. Full condition means and statistical tables are in the supplement. Figure data and `paper/generate_figures.py` reproduce the plots from saved predictions without fitting or testing.
-
-The paper now cites the published SEKE 2017 Scrum framework (DOI 10.18293/SEKE2017-139). It distinguishes the publication's 44-node, five-state description from the evaluated 42-node, three-state XML. Operational hash, reconnect, and collection-history details are in `paper/collection-audit.md`. The material disclosure about post-result scope and statistical-plan selection remains in Threats to Validity.
-
-The paper has 10 pages including references; the expanded supplement has 7 pages. Both compile and the revised plots, tables, and page flow were visually inspected. The main paper still needs a separate condensation pass for the eight-page target. The official template, author-edited abstract, and comparative related-work section are preserved.
-
-All 3,161 existing non-paper artifacts remain byte-identical. Original experimental results, reference CPTs, saved answers, predictions, tests, and token totals are unchanged. No new model requests, RNM fits, or statistical tests were performed. Independent review found no major issues; three minor interpretation refinements were resolved.
-
-
-## Revision: author comments and expanded Conclusion (16 October 2026)
-
-The latest manuscript addresses all 16 author comments on the Abstract, Introduction, and Method. The Abstract follows context, aim, method/sample, results, and implications. The Introduction motivates structured prompting and qualitative RAG before introducing the factorial design, explains why 25 nodes test reconstruction on unqueried configurations, and cites the BN knowledge-engineering rationale. Method explains the LLM's requested outputs, single-parent treatment, parent influence directions, and an actual qualitative evidence card. The same explanation-first approach was applied across the manuscript. Conclusion now synthesizes the findings, interpretation, token tradeoff, SE implications, study scope, and specific future work.
-
-This revision supersedes the previous note that the Abstract and Introduction were unchanged. It incorporates the preceding narrative revision's two figures, explained CPT examples, published Scrum-framework citation, and expanded supplement. The main draft is 10 pages, and the supplement is 7 pages. A separate condensation pass is still required for the eight-page target; the official template has not been modified. The built-in compiler and Overleaf compilation passed, and the revised pages were visually inspected. Independent review found no actionable issues; the strict source audit passed with 24 references.
-
-All 3,161 existing non-paper files are unchanged. No new model calls, RNM fits, statistical tests, or substituted results were introduced. The package remains private for author review.
+All 3,161 existing non-paper files are byte-identical to the preceding delivery. No new experimental model calls, RNM fits, statistical tests, or substituted results were introduced. The original answers, reference CPTs, predictions, test results, token counts, and saved sensitivity analyses are unchanged. The package remains private for author review.
