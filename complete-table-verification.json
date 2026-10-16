@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "nodes": 61,
+  "networks": 7,
+  "publication_families": 5,
+  "trials": 2440,
+  "attempts": 2444,
+  "complete_cells": 40,
+  "historical_files_unchanged": 3161,
+  "trial_metrics_match_historical_complete_table_metrics": true,
+  "independent_row_mean_check": true,
+  "new_model_requests": 0,
+  "new_rnm_fits": 0,
+  "input_sha256": {
+    "answers.json": "b482ca600487c7c16b47dc67a000f51d7d3d32076f7a54279e7960153fabbfd5",
+    "attempts.json": "d832889c3e492f767bc453d68b1c8bea7f19f05667adb95963cfd78eaab39d5c",
+    "inputs-provenance.json": "7b5ab1e109a581636f841fbc20e98b560e9e7ed542da49336fadc8c45e47a1df",
+    "launch-receipts.json": "14d421291fbc755277faec411444b745ceac4030f9025a0962181578df98036f",
+    "predictions.json": "11a4357a6efa9e7502f4b328962d039bb0be35738db11238de15640f6efad2dd",
+    "references.json": "78cc5e91bee309f85f8c72c0275d51e21051821908de21d577e1bc062a937cb5",
+    "tasks.json": "0eeb6a6ed9a23aca0759dfe9fb011c2cb24faf01d9a9dc56f6779f10a362e988"
+  }
+}

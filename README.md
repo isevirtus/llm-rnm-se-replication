@@ -1,82 +1,37 @@
-# LLM elicitation of software engineering Bayesian-network CPTs
+# LLM elicitation of SE BN CPTs — current full-sample analysis
 
-Private author-review replication package for **Direct Elicitation versus Ranked Nodes**: 61 ordinal SE targets, eight conditions, five replications, 2,440 initial trials and four format repairs. The primary analysis reports Scrum and Chrome separately.
+Private author-review replication package. All three RQs now evaluate all 61 nodes in seven BNs; the agreement endpoint includes every CPT row, anchors and non-anchors. The paper leads with the overall comparison and reports all seven BNs to explain variation.
 
 ## Start here
 
-1. Download `replication-package.zip` and extract it into an empty folder. The archive preserves the full folder structure and contains its own detailed README and SHA-256 manifest.
-2. From that extracted folder, with Python 3.10 or newer:
+Read [COMPLETE-TABLE-ANALYSIS.md](COMPLETE-TABLE-ANALYSIS.md), [PROTOCOL.md](PROTOCOL.md), and [PROPOSAL.md](PROPOSAL.md). Download and extract `replication-package.zip`. From its root, with Python and the listed dependencies available:
 
 ```powershell
-python -m pip install -r requirements.txt
-python reproduce.py
-python reconstruct_reference.py
+python complete-table-20261016/analyze.py
+python complete-table-20261016/generate_figure.py
 ```
 
-3. Optionally repeat all RNM optimization from the saved LLM anchors:
+The archive's historical root README and `evaluator/expected` remain unchanged for provenance. Their non-anchor headline analysis is superseded by `complete-table-20261016` for the current paper. `reproduce.py` and `reconstruct_reference.py` still reproduce the historical evidence; neither makes model calls. The current analysis reads saved predictions without refitting.
 
-```powershell
-python reproduce.py --refit
-```
+## Current findings
 
-No model requests are made by these three entry points. The scripts also shown at the repository root are for convenient inspection; run them inside the extracted package, where their data and modules reside.
+Node-weighted complete-table TV is **0.2317 direct versus 0.2404 RNM**, a **3.76% increase** with RNM. Equal publication-family weighting retains the direction. Both paired-t contrasts reject after Holm adjustment, but exact sign tests do not with five replications. RNM is closer on 31 of 61 nodes; larger losses elsewhere outweigh those gains. All eight conditions and every BN are reported. Structured prompting has limited support for direct elicitation; qualitative RAG demonstrates no benefit. RNM uses 12.1% fewer output tokens and 0.61% fewer total tokens.
 
-## Verified results
-
-All 2,440 trial metrics, statistical contrasts, and same-anchor tests reproduce. Rebuilding and fully refitting the RNM probabilities both yielded maximum difference 0.0 against the saved predictions. The separate XML reconstruction reproduces all 42 Scrum nodes (25 conditional tables) exactly under the declared numerical conventions. This does not certify AgenaRisk exporter equivalence.
-
-Primary TV: Scrum 0.3184 direct versus 0.2761 RNM; Chrome 0.2223 versus 0.2517. Both differences survive Holm-adjusted paired t-tests over five replication blocks; neither exact sign test rejects. RNM reduces output tokens 12.1% across all targets, but total tokens only 0.61%. Scope selection and testing were post hoc.
+Scope, endpoint, weighting, and inference are exploratory choices after inspection of earlier results. These comparisons do not establish universal company probabilities, practical decision value, or calibration. The saved original answers, references, predictions, and token records are unchanged: all 3,161 existing non-paper files pass byte-for-byte preservation checks.
 
 ## Files
 
-- `replication-package.zip`: collection kits, saved answers and attempt records, frozen references, fitting/scoring code, protocols, expected results, complete manuscript sources, and validation reports.
-- `paper-source.zip`: editable anonymous ACM manuscript and unchanged official class/style; compile `main.tex` with pdfLaTeX and BibTeX.
-- `seai-paper.pdf`: eight-page manuscript, including all 24 references.
-- `seai-supplement.pdf`: expanded methods and supporting results; compile `supplement.tex` from the source archive.
-- `verification.json`: full RNM refit and numerical reproduction result.
-- `manifest.json`: hashes of files inside the replication archive.
-- `SHA256SUMS.txt`: hashes of these top-level delivery files.
+- `seai-paper.pdf`: eight-page paper including 24 references.
+- `seai-supplement.pdf`: detailed construction, all-condition statistics, and explicitly restricted historical diagnostics.
+- `paper-source.zip`: editable ACM sources; compile `main.tex` and `supplement.tex` separately. Official template unchanged.
+- `replication-package.zip`: frozen data, collection inputs, original analyses, new full-sample analysis, manuscript, independent review records, and reproducibility scripts.
+- `complete-table-verification.json`: successful current metric, accounting, and preservation checks.
+- `verification.json`: earlier full-refit validation, retained unchanged.
+- `POSTHOC-ANALYSES.md` and `NODE-INFLUENCE.md`: historical supporting diagnostics, not the current primary endpoint.
+- `manifest.json` and `SHA256SUMS.txt`: archive-content and delivery hashes.
 
-## Keep reference CPTs hidden from experimental sessions
+## Isolation and access
 
-**This repository and its archives are evaluator-side material. Never clone or extract them on an experimental LLM computer/profile.** Reference CPTs, results, and manuscript conclusions are present. A subfolder is not an access boundary.
+This repository remains private for author review. The archive includes reference CPTs and evaluator outputs; do not expose it to experimental LLM sessions. The original collection-only inputs preserve reference isolation. No new LLM requests or RNM fits were made for this amendment.
 
-For collection, transfer only the `collection/` directory from the extracted package to a separate computer/profile with no references, evaluator, authoring conversations, or connected research sources. The preserved working formal kit has the actual historical 77-target schedule; the analysis filters to the 61 retained SE targets. Starting that kit makes new hosted-model requests; it is not needed to reproduce the results offline.
-
-## Provenance and limits
-
-The exported package preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed: numerical analyses can be reproduced, but the entire historical access-control audit cannot be repeated from this export alone. The detailed README documents this boundary.
-
-No public artifact, anonymous reviewer access, or third-party redistribution license is asserted. This repository is private for author review. No original publisher PDFs, authentication files, or authoring conversations are included. The manuscript has not been submitted to a conference.
-
-## Current paper: eight pages (16 October 2026)
-
-The main paper is **8 pages including references**, with a **9-page supplement**. The official ACM class, fonts, margins, and spacing are unchanged. The paper retains all three RQs, the 61-node/seven-BN sample and 25-target primary rationale, eight conditions, the qualitative RAG card and RNM anchor example, two explanatory figures, separate Scrum and Chrome findings, Chrome version and leave-one-node-out summaries, statistical qualifications, token accounting, and a substantive conclusion. All 24 verified references remain cited.
-
-The supplement carries the detailed RNM equations and parameterizations, numerical reconstruction and fitting settings, retrieval scoring, secondary metrics, alternative-fit and direction diagnostics, per-node results, complete condition means, and statistical tables. Main-text pointers identify these supporting details. Related-work and introductory repetition was shortened while preserving the comparative table and explanation-first narrative.
-
-The published Scrum framework is cited and distinguished from the evaluated XML implementation. The raw-versus-fitted and worked-row figures are reproducible with `paper/generate_figures.py`; figure values are unchanged. Offline sensitivity and node-influence analyses remain in their separate directories. See `POSTHOC-ANALYSES.md` and `NODE-INFLUENCE.md` for their reproduction commands and limits. The current paper supersedes earlier longer drafts.
-
-Both PDFs compile in Overleaf. The existing desktop source compiles, the strict source audit passes with 24 references, and all pages were visually checked. Independent scientific review found no remaining actionable issues after a caption clarification.
-
-All 3,161 existing non-paper files are byte-identical to the preceding delivery. No new experimental model calls, RNM fits, statistical tests, or substituted results were introduced. The original answers, reference CPTs, predictions, test results, token counts, and saved sensitivity analyses are unchanged. The package remains private for author review.
-
-
-## Abstract comments and aligned interpretation (16 October 2026)
-
-The latest revision addresses eight author comments. It preserves the author's data-scarcity motivation, explains how RNM generates rows without asking the LLM for those distributions, names the direct/RNM comparison explicitly, and reports the paired-t versus exact-sign statistical qualification in the Abstract and Conclusion. The fitting diagnostic is explicitly about rows already elicited from the LLM.
-
-The Introduction, Method, Results, Discussion, and Conclusion carry the same interpretation: these results do not support routinely preferring RNM over direct elicitation. The primary accuracy benefit occurred for the RNM-derived Scrum reference, while direct elicitation performed better for Chrome and overall token savings were small. Reference construction provides a compatibility explanation, not a proven sole cause. This does not imply universal superiority for direct elicitation or erase the small complete-table SESSI improvement.
-
-The main paper remains eight pages including all 24 references; the nine-page supplement and original results are unchanged. Both existing-source compilation and Overleaf compilation pass; revised pages were visually checked. Independent review's sole minor clarification was addressed. All 3,161 existing non-paper files remain byte-identical. No new model requests, fits, tests, or substituted results were introduced.
-
-
-## Introduction context, abstract flow, and anchor evaluation (16 October 2026)
-
-The revision addresses three Introduction comments: it explains primary-subset eligibility, introduces the Scrum and Chrome application contexts before their results, and adds the paper roadmap. The Abstract follows the same progression from SE decision needs and limited data through BNs, elicitation cost, RNM and LLMs, the experimental comparison, and findings.
-
-The primary RQ1 endpoint evaluates completion beyond the LLM-elicited anchors. Anchors remain evaluated in the raw-versus-fitted diagnostics and complete-table scores. Fitting uses LLM judgments, not reference probabilities; the revised Method and Results explicitly distinguish these facts. No endpoint or statistical result changed.
-
-The Overleaf main source now inputs sections/abstract.tex directly, eliminating a duplicate embedded abstract that could diverge from author edits. The paper remains eight pages with 24 references, and the nine-page supplement is unchanged. Desktop and Overleaf compilation pass; the revised layout was checked. Independent review found no major issues, and its minor endpoint clarification was incorporated.
-
-All 3,161 existing non-paper files remain byte-identical. No new model requests, fits, statistical tests, or substituted results were introduced.
+The export preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed, so numerical analyses reproduce but the entire historical access-control audit cannot be repeated from this export alone. No publisher PDFs, authentication files, or authoring conversations are included. No public redistribution license or anonymous reviewer access is asserted.
