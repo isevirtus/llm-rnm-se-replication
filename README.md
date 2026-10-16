@@ -74,3 +74,12 @@ The archive includes `posthoc-node-influence-20261016/analyze.py`, all 125 omiss
 The Abstract preserves the author's opening and clarifies the relationship between the 61-node/seven-BN sample and the 25 multi-parent primary targets. Application areas introduce the reference contrasts. The Introduction now moves from transparency and limited data in SE decisions to BNs, CPT-construction cost, semi-automatic methods, LLM elicitation, and the study's three RQs. Seven verified references were added; the cited WSA/RNM comparison is explicitly a preprint. BN/BNs and RAG are used consistently after definition.
 
 This is a prose and bibliography revision only. All non-paper replication artifacts remain byte-identical to the previous delivery, including original results and both post-hoc analysis directories. The official LaTeX template is unchanged. The expanded author-review paper is nine pages (including references), with a six-page supplement; an eight-page submission target still requires a separate condensation pass. No new model calls, fits, or inferential tests were performed.
+
+
+## Revision: related-work comparison (16 October 2026)
+
+Section 2 now compares five LLM-assisted BN studies with this experiment in Table 1. The table distinguishes elicitation granularity, numerical versus qualitative evidence, evaluation materials, and numerical CPT agreement versus modeling/usability or downstream endpoints. The accompanying synthesis positions the study as a comparison of sparse LLM anchors plus RNM reconstruction against complete-table elicitation, together with prompt/RAG treatments and computational effort. It acknowledges prior LLM-plus-fitting approaches. The virtual-survey reference is explicitly identified as a preprint.
+
+Independent review resolved three scope clarifications. The paper compiles successfully and its table and page flow were visually inspected. The author-review paper is 9 pages including references; the unchanged supplement is 6 pages. The eight-page target still requires a separate condensation pass. The official template, author-edited abstract, and all other substantive sections are unchanged.
+
+All 3,161 non-paper replication files remain byte-identical to the preceding delivery. Original collection, responses, CPTs, statistical analyses, token totals, and offline sensitivity analyses are unchanged. No new model calls, fits, or statistical tests were performed.
