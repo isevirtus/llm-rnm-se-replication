@@ -58,3 +58,12 @@ The Scrum benefit and Chrome disadvantage persist across the saved-response alte
 All 3,129 protected original evidence and collection files remain byte-identical. No new LLM calls were made. The original predictions, reference CPTs, statistical tests, and token totals are unchanged. `posthoc-verification.json` documents preservation and checks; `validation/revision-20261016-reproduction.json` inside the package records another successful reproduction of all original trial scores and statistical contrasts. The original `verification.json` remains the earlier full-refit validation record.
 
 These additions are explicitly post hoc and descriptive; no new p-values or collection-cost totals are substituted. The package remains evaluator-only and the repository remains private for author review.
+
+## Revision: Chrome versions and leave-one-node-out checks (16 October 2026)
+
+
+The main paper now reports Chrome 40 and Chrome 42 separately and summarizes all 25 single-target omission checks. The six-page supplement contains the version means, complete omission tables, and aggregation details. See `NODE-INFLUENCE.md` for the portable reproduction command and interpretation.
+
+Chrome 40's primary RNM-minus-direct TV is +0.0033, compared with +0.0556 for Chrome 42. Every omission preserves the original direction in all five blocks: Scrum remains favorable to RNM and Chrome unfavorable. The results are descriptive post-hoc influence diagnostics, not significance tests, cross-validation, or a revised sample. All original predictions, reference tables, statistical tests, and token totals are unchanged; no new model calls or fitting were performed for this revision.
+
+The archive includes `posthoc-node-influence-20261016/analyze.py`, all 125 omission/block records, 25 omission summaries, 15 network/block records, network means, input hashes, and verification outputs. The paper and supplement compile; the official template remains unchanged. Newer author edits to the abstract were preserved.

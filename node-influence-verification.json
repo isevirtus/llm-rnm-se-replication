@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "original_inputs_unchanged": true,
+  "input_sha256": {
+    "evaluator/expected/trial-metrics.csv": "5b84868805d341b0e9f24bb390a0121beaf288ad1897b632a6a776c1a110627c",
+    "evaluator/expected/statistics.json": "ecb7614b71028d76fbd4df209b98405baf00cce8cf25112c2095fe3606c13b2b",
+    "collection/formal-original-77/variables.json": "c9b9f1cbc4b5d328448dd48c76a2bb367748775f5752e0bdbcfbf80cc3a92323"
+  },
+  "primary_trials": 1000,
+  "primary_targets": 25,
+  "network_block_rows": 15,
+  "omissions": 25,
+  "omission_block_rows": 125,
+  "original_baseline_reproduced_tolerance": 1e-12,
+  "all_omissions_preserve_all_five_directions": true,
+  "no_new_model_calls": true,
+  "no_refitting": true,
+  "no_new_tests": true
+}
