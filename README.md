@@ -80,6 +80,26 @@ This is a prose and bibliography revision only. All non-paper replication artifa
 
 Section 2 now compares five LLM-assisted BN studies with this experiment in Table 1. The table distinguishes elicitation granularity, numerical versus qualitative evidence, evaluation materials, and numerical CPT agreement versus modeling/usability or downstream endpoints. The accompanying synthesis positions the study as a comparison of sparse LLM anchors plus RNM reconstruction against complete-table elicitation, together with prompt/RAG treatments and computational effort. It acknowledges prior LLM-plus-fitting approaches. The virtual-survey reference is explicitly identified as a preprint.
 
-Independent review resolved three scope clarifications. The paper compiles successfully and its table and page flow were visually inspected. The author-review paper is 9 pages including references; the unchanged supplement is 6 pages. The eight-page target still requires a separate condensation pass. The official template, author-edited abstract, and all other substantive sections are unchanged.
+Independent review resolved three scope clarifications. The paper compiles successfully and its table and page flow were visually inspected. The author-review paper is 10 pages including references; the unchanged supplement is 7 pages. The eight-page target still requires a separate condensation pass. The official template, author-edited abstract, and all other substantive sections are unchanged.
 
 All 3,161 non-paper replication files remain byte-identical to the preceding delivery. Original collection, responses, CPTs, statistical analyses, token totals, and offline sensitivity analyses are unchanged. No new model calls, fits, or statistical tests were performed.
+
+
+## Revision: explained results and published Scrum provenance (16 October 2026)
+
+The Results now follow the three research questions through the method contrast, prompting and qualitative RAG, and token accounting. Two vector figures show replication-level effects and anchor fitting, followed by explained Cohesion and Major Contributors CPT examples. The examples are explicitly selected contrasting illustrations, not representative cases. Full condition means and statistical tables are in the supplement. Figure data and `paper/generate_figures.py` reproduce the plots from saved predictions without fitting or testing.
+
+The paper now cites the published SEKE 2017 Scrum framework (DOI 10.18293/SEKE2017-139). It distinguishes the publication's 44-node, five-state description from the evaluated 42-node, three-state XML. Operational hash, reconnect, and collection-history details are in `paper/collection-audit.md`. The material disclosure about post-result scope and statistical-plan selection remains in Threats to Validity.
+
+The paper has 10 pages including references; the expanded supplement has 7 pages. Both compile and the revised plots, tables, and page flow were visually inspected. The main paper still needs a separate condensation pass for the eight-page target. The official template, author-edited abstract, and comparative related-work section are preserved.
+
+All 3,161 existing non-paper artifacts remain byte-identical. Original experimental results, reference CPTs, saved answers, predictions, tests, and token totals are unchanged. No new model requests, RNM fits, or statistical tests were performed. Independent review found no major issues; three minor interpretation refinements were resolved.
+
+
+## Revision: author comments and expanded Conclusion (16 October 2026)
+
+The latest manuscript addresses all 16 author comments on the Abstract, Introduction, and Method. The Abstract follows context, aim, method/sample, results, and implications. The Introduction motivates structured prompting and qualitative RAG before introducing the factorial design, explains why 25 nodes test reconstruction on unqueried configurations, and cites the BN knowledge-engineering rationale. Method explains the LLM's requested outputs, single-parent treatment, parent influence directions, and an actual qualitative evidence card. The same explanation-first approach was applied across the manuscript. Conclusion now synthesizes the findings, interpretation, token tradeoff, SE implications, study scope, and specific future work.
+
+This revision supersedes the previous note that the Abstract and Introduction were unchanged. It incorporates the preceding narrative revision's two figures, explained CPT examples, published Scrum-framework citation, and expanded supplement. The main draft is 10 pages, and the supplement is 7 pages. A separate condensation pass is still required for the eight-page target; the official template has not been modified. The built-in compiler and Overleaf compilation passed, and the revised pages were visually inspected. Independent review found no actionable issues; the strict source audit passed with 24 references.
+
+All 3,161 existing non-paper files are unchanged. No new model calls, RNM fits, statistical tests, or substituted results were introduced. The package remains private for author review.
