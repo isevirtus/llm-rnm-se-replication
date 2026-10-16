@@ -47,3 +47,14 @@ For collection, transfer only the `collection/` directory from the extracted pac
 The exported package preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed: numerical analyses can be reproduced, but the entire historical access-control audit cannot be repeated from this export alone. The detailed README documents this boundary.
 
 No public artifact, anonymous reviewer access, or third-party redistribution license is asserted. This repository is private for author review. No original publisher PDFs, authentication files, or authoring conversations are included. The manuscript has not been submitted to a conference.
+
+## Revision: offline sensitivity analyses (16 October 2026)
+
+
+The revised paper adds a uniform baseline, secondary metrics, matched direct-anchor fits, aggregation-family selection by anchor fit, stronger searches, expanded bounds, and reference-informed direction diagnostics. Read `POSTHOC-ANALYSES.md` for the results and reproduction commands; source, saved fitted tables, and verification records are in `posthoc-20261016/` inside the archive. `paper/supplement.tex` contains full procedures, example distributions, qualitative cards, and node-level effects.
+
+The Scrum benefit and Chrome disadvantage persist across the saved-response alternatives. Complete-reference searches are in-sample best-found approximations, not validated predictions, global optima, or RNM error floors. The revised interpretation concerns the tested pipeline.
+
+All 3,129 protected original evidence and collection files remain byte-identical. No new LLM calls were made. The original predictions, reference CPTs, statistical tests, and token totals are unchanged. `posthoc-verification.json` documents preservation and checks; `validation/revision-20261016-reproduction.json` inside the package records another successful reproduction of all original trial scores and statistical contrasts. The original `verification.json` remains the earlier full-refit validation record.
+
+These additions are explicitly post hoc and descriptive; no new p-values or collection-cost totals are substituted. The package remains evaluator-only and the repository remains private for author review.
