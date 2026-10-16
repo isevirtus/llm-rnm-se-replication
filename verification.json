@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "nodes": 61,
+  "trials": 2440,
+  "attempts": 2444,
+  "cells_per_replication": 8,
+  "replications": 5,
+  "all_trial_metrics_match": true,
+  "all_statistical_contrasts_match": true,
+  "anchor_tests_match": true,
+  "max_probability_rebuild_difference": 0.0,
+  "refitted_from_llm_anchors": true,
+  "max_probability_refit_difference": 0.0,
+  "no_model_requests": true
+}
