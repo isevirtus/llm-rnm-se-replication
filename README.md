@@ -67,3 +67,10 @@ The main paper now reports Chrome 40 and Chrome 42 separately and summarizes all
 Chrome 40's primary RNM-minus-direct TV is +0.0033, compared with +0.0556 for Chrome 42. Every omission preserves the original direction in all five blocks: Scrum remains favorable to RNM and Chrome unfavorable. The results are descriptive post-hoc influence diagnostics, not significance tests, cross-validation, or a revised sample. All original predictions, reference tables, statistical tests, and token totals are unchanged; no new model calls or fitting were performed for this revision.
 
 The archive includes `posthoc-node-influence-20261016/analyze.py`, all 125 omission/block records, 25 omission summaries, 15 network/block records, network means, input hashes, and verification outputs. The paper and supplement compile; the official template remains unchanged. Newer author edits to the abstract were preserved.
+
+
+## Revision: motivation, scope, and terminology (16 October 2026)
+
+The Abstract preserves the author's opening and clarifies the relationship between the 61-node/seven-BN sample and the 25 multi-parent primary targets. Application areas introduce the reference contrasts. The Introduction now moves from transparency and limited data in SE decisions to BNs, CPT-construction cost, semi-automatic methods, LLM elicitation, and the study's three RQs. Seven verified references were added; the cited WSA/RNM comparison is explicitly a preprint. BN/BNs and RAG are used consistently after definition.
+
+This is a prose and bibliography revision only. All non-paper replication artifacts remain byte-identical to the previous delivery, including original results and both post-hoc analysis directories. The official LaTeX template is unchanged. The expanded author-review paper is nine pages (including references), with a six-page supplement; an eight-page submission target still requires a separate condensation pass. No new model calls, fits, or inferential tests were performed.
