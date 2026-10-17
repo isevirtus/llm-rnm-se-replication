@@ -59,3 +59,7 @@ Section 2 now opens with a roadmap, reviews semi-automatic CPT construction in S
 ## Method flow and condition descriptions
 
 Section 3 now introduces the factorial design, describes the seven BNs and evaluated CPTs, separates shared inputs from method-specific outputs, and explains each prompt/evidence combination. Reference construction mechanics remain in the supplement. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## RNM background explanation
+
+Section 2.1 now focuses on RNM, explaining ordinal intervals, parent aggregation, child-state probability mass, parameter roles, fitting, and representational assumptions, followed by brief alternatives. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
