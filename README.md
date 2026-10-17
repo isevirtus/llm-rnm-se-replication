@@ -47,3 +47,7 @@ The abstract now explains that structured prompts clarified conditioning, framed
 ## Abstract clarification: qualitative RAG
 
 The abstract now explains that qualitative RAG supplied short passages on domain relationships without reference probabilities or numerical parameters. The paper remains eight pages and the abstract is 239 words. All numerical analyses and the supplement are unchanged.
+
+## Introduction source citations
+
+The Introduction now cites the source study for each of the five application areas covered by the seven BNs. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
