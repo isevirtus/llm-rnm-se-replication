@@ -51,3 +51,7 @@ The abstract now explains that qualitative RAG supplied short passages on domain
 ## Introduction source citations
 
 The Introduction now cites the source study for each of the five application areas covered by the seven BNs. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Related Work organization
+
+Section 2 now opens with a roadmap, reviews semi-automatic CPT construction in Section 2.1, and discusses LLM construction in Section 2.2, closing with our contribution and Table 1. Current author edits to the Introduction are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
