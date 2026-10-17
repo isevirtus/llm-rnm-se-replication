@@ -55,3 +55,7 @@ The Introduction now cites the source study for each of the five application are
 ## Related Work organization
 
 Section 2 now opens with a roadmap, reviews semi-automatic CPT construction in Section 2.1, and discusses LLM construction in Section 2.2, closing with our contribution and Table 1. Current author edits to the Introduction are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Method flow and condition descriptions
+
+Section 3 now introduces the factorial design, describes the seven BNs and evaluated CPTs, separates shared inputs from method-specific outputs, and explains each prompt/evidence combination. Reference construction mechanics remain in the supplement. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
