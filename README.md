@@ -39,3 +39,7 @@ The export preserves original answer text and hashes plus operational receipts w
 ## Wording clarification: uneven representation
 
 The Abstract, Introduction, Method, and Results now introduce the unequal contribution of nodes before explaining equal-study weighting. Scrum and Chrome supply 52 of 61 nodes and therefore dominate the node-weighted mean. Giving each of the five source studies equal weight checks whether that concentration changes the overall direction; direct elicitation still has lower mean error. This is uneven representation of source studies, not imbalance in outcome classes. The author's latest abstract closing edit is preserved. All numerical analyses, data, and the supplement remain unchanged.
+
+## Abstract clarification: structured prompting
+
+The abstract now explains that structured prompts clarified conditioning, framed probabilities as hypothetical frequencies, and requested consistency checks. The paper remains eight pages and the abstract is 246 words. All numerical analyses and the supplement are unchanged.
