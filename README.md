@@ -71,3 +71,7 @@ Section 3 adds simplified prompt excerpts and a verified Cohesion RAG card. Sect
 ## Discussion interpretation and implications
 
 Section 5 interprets all three RQs against the literature and distinguishes research and practitioner implications. It separates reconstruction compatibility, the information supplied by prompting and RAG, and elicitation burden from token usage. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Study-specific threats to validity
+
+Section 6 now links each study-specific threat to its affected conclusions, existing safeguards, and residual uncertainty. Reference validity is explicit alongside construct, internal, conclusion, and external validity. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
