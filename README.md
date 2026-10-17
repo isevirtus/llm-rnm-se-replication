@@ -83,3 +83,7 @@ Section 7 now synthesizes the main lessons and contribution, then prioritizes lo
 ## Data availability and AI-use statements
 
 End matter now links to the anonymous replication repository and discloses experimental and supporting AI use. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## TikZ experimental design overview
+
+Section 3 now integrates a native TikZ overview of all seven BNs, sample counts, eight conditions, method outputs, hidden reference path, and evaluation. The anchor rule is explicit, with the five queried and four unqueried Cohesion rows explained; it matches saved configurations for all 61 nodes. Author edits to the abstract and AI statement are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
