@@ -79,3 +79,7 @@ Section 6 now links each study-specific threat to its affected conclusions, exis
 ## Conclusion synthesis and future work
 
 Section 7 now synthesizes the main lessons and contribution, then prioritizes local evidence and expert validation, downstream decision evaluation, relationship-specific method choice, and broader model and efficiency testing. Declarations are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Data availability and AI-use statements
+
+End matter now links to the anonymous replication repository and discloses experimental and supporting AI use. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
