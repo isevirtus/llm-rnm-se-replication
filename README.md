@@ -75,3 +75,7 @@ Section 5 interprets all three RQs against the literature and distinguishes rese
 ## Study-specific threats to validity
 
 Section 6 now links each study-specific threat to its affected conclusions, existing safeguards, and residual uncertainty. Reference validity is explicit alongside construct, internal, conclusion, and external validity. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Conclusion synthesis and future work
+
+Section 7 now synthesizes the main lessons and contribution, then prioritizes local evidence and expert validation, downstream decision evaluation, relationship-specific method choice, and broader model and efficiency testing. Declarations are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
