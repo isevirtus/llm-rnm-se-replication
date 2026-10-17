@@ -35,3 +35,7 @@ Scope, endpoint, weighting, and inference are exploratory choices after inspecti
 This repository remains private for author review. The archive includes reference CPTs and evaluator outputs; do not expose it to experimental LLM sessions. The original collection-only inputs preserve reference isolation. No new LLM requests or RNM fits were made for this amendment.
 
 The export preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed, so numerical analyses reproduce but the entire historical access-control audit cannot be repeated from this export alone. No publisher PDFs, authentication files, or authoring conversations are included. No public redistribution license or anonymous reviewer access is asserted.
+
+## Wording clarification: uneven representation
+
+The Abstract, Introduction, Method, and Results now introduce the unequal contribution of nodes before explaining equal-study weighting. Scrum and Chrome supply 52 of 61 nodes and therefore dominate the node-weighted mean. Giving each of the five source studies equal weight checks whether that concentration changes the overall direction; direct elicitation still has lower mean error. This is uneven representation of source studies, not imbalance in outcome classes. The author's latest abstract closing edit is preserved. All numerical analyses, data, and the supplement remain unchanged.
