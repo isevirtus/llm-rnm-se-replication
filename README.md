@@ -67,3 +67,7 @@ Section 2.1 now focuses on RNM, explaining ordinal intervals, parent aggregation
 ## Prompt examples and RQ-led results
 
 Section 3 adds simplified prompt excerpts and a verified Cohesion RAG card. Section 4 explains the tables and figures through the three RQs. The accidentally removed related-work comparison table and its cross-reference are restored as requested. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Discussion interpretation and implications
+
+Section 5 interprets all three RQs against the literature and distinguishes research and practitioner implications. It separates reconstruction compatibility, the information supplied by prompting and RAG, and elicitation burden from token usage. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
