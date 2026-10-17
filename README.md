@@ -43,3 +43,7 @@ The Abstract, Introduction, Method, and Results now introduce the unequal contri
 ## Abstract clarification: structured prompting
 
 The abstract now explains that structured prompts clarified conditioning, framed probabilities as hypothetical frequencies, and requested consistency checks. The paper remains eight pages and the abstract is 246 words. All numerical analyses and the supplement are unchanged.
+
+## Abstract clarification: qualitative RAG
+
+The abstract now explains that qualitative RAG supplied short passages on domain relationships without reference probabilities or numerical parameters. The paper remains eight pages and the abstract is 239 words. All numerical analyses and the supplement are unchanged.
