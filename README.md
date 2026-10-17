@@ -63,3 +63,7 @@ Section 3 now introduces the factorial design, describes the seven BNs and evalu
 ## RNM background explanation
 
 Section 2.1 now focuses on RNM, explaining ordinal intervals, parent aggregation, child-state probability mass, parameter roles, fitting, and representational assumptions, followed by brief alternatives. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Prompt examples and RQ-led results
+
+Section 3 adds simplified prompt excerpts and a verified Cohesion RAG card. Section 4 explains the tables and figures through the three RQs. The accidentally removed related-work comparison table and its cross-reference are restored as requested. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
