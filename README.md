@@ -1,6 +1,6 @@
 # LLM elicitation of SE BN CPTs — current full-sample analysis
 
-Private author-review replication package. All three RQs now evaluate all 61 nodes in seven BNs; the agreement endpoint includes every CPT row, anchors and non-anchors. The paper leads with the overall comparison and reports all seven BNs to explain variation.
+Replication package for author and reviewer inspection. All three RQs now evaluate all 61 nodes in seven BNs; the agreement endpoint includes every CPT row, anchors and non-anchors. The paper leads with the overall comparison and reports all seven BNs to explain variation.
 
 ## Start here
 
@@ -32,9 +32,9 @@ Scope, endpoint, weighting, and inference are exploratory choices after inspecti
 
 ## Isolation and access
 
-This repository remains private for author review. The archive includes reference CPTs and evaluator outputs; do not expose it to experimental LLM sessions. The original collection-only inputs preserve reference isolation. No new LLM requests or RNM fits were made for this amendment.
+The archive includes reference CPTs and evaluator outputs; do not expose it to experimental LLM sessions. The original collection-only inputs preserve reference isolation. No new LLM requests or RNM fits were made for this amendment.
 
-The export preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed, so numerical analyses reproduce but the entire historical access-control audit cannot be repeated from this export alone. No publisher PDFs, authentication files, or authoring conversations are included. No public redistribution license or anonymous reviewer access is asserted.
+The export preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed, so numerical analyses reproduce but the entire historical access-control audit cannot be repeated from this export alone. No publisher PDFs, authentication files, or authoring conversations are included. The anonymous reviewer link is provided in the paper; repository visibility is managed separately by its owner.
 
 ## Wording clarification: uneven representation
 
@@ -87,3 +87,17 @@ End matter now links to the anonymous replication repository and discloses exper
 ## TikZ experimental design overview
 
 Section 3 now integrates a native TikZ overview of all seven BNs, sample counts, eight conditions, method outputs, hidden reference path, and evaluation. The anchor rule is explicit, with the five queried and four unqueried Cohesion rows explained; it matches saved configurations for all 61 nodes. Author edits to the abstract and AI statement are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
+
+## Scalability and practical interpretation (18 October 2026)
+
+The paper remains eight pages. It separates exact reductions in requested rows from observed token savings and conditional extrapolations. For ternary parents, N=3^k and the implemented anchor rule uses A=2k+3 for k>=3. Exact requested-row reductions at 81/243 rows are 86.4%/94.7%; 36.4%/65.9% total-token reductions are conditional scenarios, not measured large-CPT savings. Models use 45 ternary nodes and only three observed size levels; all five largest targets are Scrum. Numerical accuracy and end-to-end runtime at larger sizes remain untested.
+
+After extracting the replication archive, reproduce the derived analysis with:
+
+```powershell
+python scalability-20261018/estimate.py
+```
+
+This addition reads saved attempts and reference metadata only; no new model calls or CPT fits are performed. All 3,182 prior non-paper artifacts are unchanged. The complete-table statistical tests remain unchanged. The new directory includes code, coefficients, node token means, exact counts, scenario CSVs, a limited size-holdout check, and source hashes.
+
+The Discussion distinguishes numerical significance from decision relevance: the node-weighted RNM-minus-direct difference is 0.00871 TV (0.87 points on a 0–100 TV scale), versus 0.02517 under equal-family weighting. These are differences in average reference distance, not uniform probability shifts or measured decision effects. No acceptable-error threshold or downstream utility test establishes practical superiority or equivalence. Detailed derivations and the weighting-sensitivity plot are in the updated supplement; the main paper preserves the experimental-design diagram and illustrative probability comparisons.
