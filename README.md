@@ -1,107 +1,52 @@
-# LLM elicitation of SE BN CPTs — current full-sample analysis
+# LLM construction of software-engineering BN probability tables
 
-Replication package for author and reviewer inspection. All three RQs now evaluate all 61 nodes in seven BNs; the agreement endpoint includes every CPT row, anchors and non-anchors. The paper leads with the overall comparison and reports all seven BNs to explain variation.
+Replication materials for **Large Language Models for Bayesian Network Parameterization in Software Engineering: Direct Elicitation versus Ranked Nodes**.
 
-## Start here
+## Study and primary endpoint
 
-Read [COMPLETE-TABLE-ANALYSIS.md](COMPLETE-TABLE-ANALYSIS.md), [PROTOCOL.md](PROTOCOL.md), and [PROPOSAL.md](PROPOSAL.md). Download and extract `replication-package.zip`. From its root, with Python and the listed dependencies available:
+The sample contains 61 ordinal conditional nodes from seven BNs in five publication families: Scrum, Chrome 40 and 42, APS, SESSI, and Software logs 3 and 4. Eight conditions cross direct/RNM elicitation, baseline/structured prompts, and no-RAG/qualitative-RAG evidence. Five replications provide 2,440 completed trials and four format repairs. Collection used Codex CLI 0.162.1, requested model `gpt-6-astra`, effort `medium`, on 15–16 October 2026.
+
+The main comparison includes **every CPT row, including anchors**, with equal node weights. Equal publication-family weighting is a sensitivity analysis. Paired tests use five replication blocks, not nodes or rows as independent observations. Results concern agreement with fixed reference CPTs, not predictive calibration or company decision quality. Scope and analysis choices followed inspection of results; inference is exploratory.
+
+Direct mean TV is 0.231711 and RNM mean TV is 0.240422 (RNM minus direct +0.008710). The paired-t contrast is significant under its assumptions. With five pairs, the smallest possible two-sided exact sign-test p is 0.0625; its non-rejection at 5% cannot contradict the consistent direction. No practical-error threshold or downstream utility evaluation establishes practical superiority or equivalence.
+
+## Reading and offline reproduction
+
+`seai-paper.pdf` is the eight-page article; `seai-supplement.pdf` contains detailed methods and analyses. `paper/main.tex` uses the official ACM class and bibliography style. Install Python 3.10+ and the dependencies, extract `replication-package.zip`, then run from its root:
 
 ```powershell
+python -m pip install -r requirements.txt
+python reproduce.py
 python complete-table-20261016/analyze.py
-python complete-table-20261016/generate_figure.py
-```
-
-The archive's historical root README and `evaluator/expected` remain unchanged for provenance. Their non-anchor headline analysis is superseded by `complete-table-20261016` for the current paper. `reproduce.py` and `reconstruct_reference.py` still reproduce the historical evidence; neither makes model calls. The current analysis reads saved predictions without refitting.
-
-## Current findings
-
-Node-weighted complete-table TV is **0.2317 direct versus 0.2404 RNM**, a **3.76% increase** with RNM. Equal publication-family weighting retains the direction. Both paired-t contrasts reject after Holm adjustment, but exact sign tests do not with five replications. RNM is closer on 31 of 61 nodes; larger losses elsewhere outweigh those gains. All eight conditions and every BN are reported. Structured prompting has limited support for direct elicitation; qualitative RAG demonstrates no benefit. RNM uses 12.1% fewer output tokens and 0.61% fewer total tokens.
-
-Scope, endpoint, weighting, and inference are exploratory choices after inspection of earlier results. These comparisons do not establish universal company probabilities, practical decision value, or calibration. The saved original answers, references, predictions, and token records are unchanged: all 3,161 existing non-paper files pass byte-for-byte preservation checks.
-
-## Files
-
-- `seai-paper.pdf`: eight-page paper including 24 references.
-- `seai-supplement.pdf`: detailed construction, all-condition statistics, and explicitly restricted historical diagnostics.
-- `paper-source.zip`: editable ACM sources; compile `main.tex` and `supplement.tex` separately. Official template unchanged.
-- `replication-package.zip`: frozen data, collection inputs, original analyses, new full-sample analysis, manuscript, independent review records, and reproducibility scripts.
-- `complete-table-verification.json`: successful current metric, accounting, and preservation checks.
-- `verification.json`: earlier full-refit validation, retained unchanged.
-- `POSTHOC-ANALYSES.md` and `NODE-INFLUENCE.md`: historical supporting diagnostics, not the current primary endpoint.
-- `manifest.json` and `SHA256SUMS.txt`: archive-content and delivery hashes.
-
-## Isolation and access
-
-The archive includes reference CPTs and evaluator outputs; do not expose it to experimental LLM sessions. The original collection-only inputs preserve reference isolation. No new LLM requests or RNM fits were made for this amendment.
-
-The export preserves original answer text and hashes plus operational receipts with local paths/session identifiers removed. Full client event streams are not distributed, so numerical analyses reproduce but the entire historical access-control audit cannot be repeated from this export alone. No publisher PDFs, authentication files, or authoring conversations are included. The anonymous reviewer link is provided in the paper; repository visibility is managed separately by its owner.
-
-## Wording clarification: uneven representation
-
-The Abstract, Introduction, Method, and Results now introduce the unequal contribution of nodes before explaining equal-study weighting. Scrum and Chrome supply 52 of 61 nodes and therefore dominate the node-weighted mean. Giving each of the five source studies equal weight checks whether that concentration changes the overall direction; direct elicitation still has lower mean error. This is uneven representation of source studies, not imbalance in outcome classes. The author's latest abstract closing edit is preserved. All numerical analyses, data, and the supplement remain unchanged.
-
-## Abstract clarification: structured prompting
-
-The abstract now explains that structured prompts clarified conditioning, framed probabilities as hypothetical frequencies, and requested consistency checks. The paper remains eight pages and the abstract is 246 words. All numerical analyses and the supplement are unchanged.
-
-## Abstract clarification: qualitative RAG
-
-The abstract now explains that qualitative RAG supplied short passages on domain relationships without reference probabilities or numerical parameters. The paper remains eight pages and the abstract is 239 words. All numerical analyses and the supplement are unchanged.
-
-## Introduction source citations
-
-The Introduction now cites the source study for each of the five application areas covered by the seven BNs. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Related Work organization
-
-Section 2 now opens with a roadmap, reviews semi-automatic CPT construction in Section 2.1, and discusses LLM construction in Section 2.2, closing with our contribution and Table 1. Current author edits to the Introduction are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Method flow and condition descriptions
-
-Section 3 now introduces the factorial design, describes the seven BNs and evaluated CPTs, separates shared inputs from method-specific outputs, and explains each prompt/evidence combination. Reference construction mechanics remain in the supplement. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## RNM background explanation
-
-Section 2.1 now focuses on RNM, explaining ordinal intervals, parent aggregation, child-state probability mass, parameter roles, fitting, and representational assumptions, followed by brief alternatives. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Prompt examples and RQ-led results
-
-Section 3 adds simplified prompt excerpts and a verified Cohesion RAG card. Section 4 explains the tables and figures through the three RQs. The accidentally removed related-work comparison table and its cross-reference are restored as requested. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Discussion interpretation and implications
-
-Section 5 interprets all three RQs against the literature and distinguishes research and practitioner implications. It separates reconstruction compatibility, the information supplied by prompting and RAG, and elicitation burden from token usage. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Study-specific threats to validity
-
-Section 6 now links each study-specific threat to its affected conclusions, existing safeguards, and residual uncertainty. Reference validity is explicit alongside construct, internal, conclusion, and external validity. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Conclusion synthesis and future work
-
-Section 7 now synthesizes the main lessons and contribution, then prioritizes local evidence and expert validation, downstream decision evaluation, relationship-specific method choice, and broader model and efficiency testing. Declarations are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Data availability and AI-use statements
-
-End matter now links to the anonymous replication repository and discloses experimental and supporting AI use. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## TikZ experimental design overview
-
-Section 3 now integrates a native TikZ overview of all seven BNs, sample counts, eight conditions, method outputs, hidden reference path, and evaluation. The anchor rule is explicit, with the five queried and four unqueried Cohesion rows explained; it matches saved configurations for all 61 nodes. Author edits to the abstract and AI statement are preserved. The paper remains eight pages. All numerical analyses and the supplement are unchanged.
-
-## Scalability and practical interpretation (18 October 2026)
-
-The paper remains eight pages. It separates exact reductions in requested rows from observed token savings and conditional extrapolations. For ternary parents, N=3^k and the implemented anchor rule uses A=2k+3 for k>=3. Exact requested-row reductions at 81/243 rows are 86.4%/94.7%; 36.4%/65.9% total-token reductions are conditional scenarios, not measured large-CPT savings. Models use 45 ternary nodes and only three observed size levels; all five largest targets are Scrum. Numerical accuracy and end-to-end runtime at larger sizes remain untested.
-
-After extracting the replication archive, reproduce the derived analysis with:
-
-```powershell
 python scalability-20261018/estimate.py
+python log-node-diagnostic-20261018/diagnose.py
 ```
 
-This addition reads saved attempts and reference metadata only; no new model calls or CPT fits are performed. All 3,182 prior non-paper artifacts are unchanged. The complete-table statistical tests remain unchanged. The new directory includes code, coefficients, node token means, exact counts, scenario CSVs, a limited size-holdout check, and source hashes.
+These commands need no hosted-model account or new LLM request. `reproduce.py` checks saved evidence and reproduces the earlier restricted diagnostics. **`complete-table-20261016/statistics.json` is the authority for the paper's three full-sample RQs.** The complete-table script recomputes all 2,440 trial metrics, five-block comparisons, and repair-inclusive token accounting. The scalability script separates exact anchor counts from conditional token projections. The log-node diagnostic examines saved raw judgments and fitted tables and reports full-sample single-node influence. Original responses and numerical results are retained.
 
-The Discussion distinguishes numerical significance from decision relevance: the node-weighted RNM-minus-direct difference is 0.00871 TV (0.87 points on a 0–100 TV scale), versus 0.02517 under equal-family weighting. These are differences in average reference distance, not uniform probability shifts or measured decision effects. No acceptable-error threshold or downstream utility test establishes practical superiority or equivalence. Detailed derivations and the weighting-sensitivity plot are in the updated supplement; the main paper preserves the experimental-design diagram and illustrative probability comparisons.
+Optional `python reproduce.py --refit` repeats bounded optimization from saved LLM anchors. The fitter uses judgments and predefined state mappings; reference probabilities enter scoring only. Hosted-model generation is not guaranteed reproducible. `python reconstruct_reference.py` checks the declared numerical reconstruction of the archived 42-node Scrum model, including 25 conditional tables; it does not certify agreement with AgenaRisk's exporter.
 
-## Abstract and conclusion: scalability and practical relevance
+## Contents
 
-The abstract retains the author's motivation from understandable models and scarce data to expert elicitation, RNM, and LLM knowledge sources. Both closing sections distinguish reference agreement from predictive or decision quality, exact anchor-policy savings from conditional token projections, and statistical significance from practical importance. The article remains eight pages; the supplement remains twelve. Experimental responses, fitted CPTs, scores, tests, and the previously added scalability analysis are unchanged.
+| Location | Purpose |
+|---|---|
+| `paper/` | Article, supplement, modular LaTeX, bibliography and official template dependencies. |
+| `evaluator/data/` | Reference CPTs, saved answers and predictions, task definitions, attempts and minimal launch receipts. |
+| `evaluator/responses/` | Original answer text, including format-repair attempts. |
+| `evaluator/ordinal_engine.py` and adapter | RNM integration, bounded fitting, and state-order mapping. |
+| `complete-table-20261016/` | Main full-sample scores, statistical tests, protocol and analysis specification. |
+| `scalability-20261018/` | Observed token costs, regression coefficients and conditional larger-CPT scenarios. |
+| `log-node-diagnostic-20261018/` | Software-log node diagnosis and descriptive influence across all 61 nodes. |
+| `posthoc-20261016/`, `posthoc-node-influence-20261016/` | Restricted 25-node reconstruction diagnostics; these are not the main endpoint. |
+| `evaluator/expected/`, `evaluator/historical-analysis/` | Earlier numerical analyses and their specifications, retained for traceability. |
+| `evaluator/reference-construction/` | Reference construction source and metadata. |
+| `collection/` | Reference-free collection kits, including the actual broader 77-target schedule and smoke test. |
+| `manifest.json` | SHA-256 hashes of the distributed contents. |
+
+## Reference isolation and interpretation
+
+This is **evaluator-side material**: do not expose the repository or full archive to experimental LLM sessions. New collection requires a separate computer/profile with only the appropriate reference-free collection files, fresh sessions, and the documented controls. The original collection schedule includes 16 targets excluded from the 61-node SE analysis; running it makes new hosted-model requests and is unnecessary for offline reproduction.
+
+Scrum references are numerical reconstructions from archived XML parameters and expressions. Other CPTs describe the contexts of their published studies; SESSI uses the original elicited Appendix A3 table. Third-party datasets retain their own rights. Publisher PDFs, credentials, authoring conversations and internal manuscript reviews are excluded.
+
+Launch receipts omit local paths and session identifiers. Original raw-file hashes remain in attempt records, but full event streams are not distributed. The package supports numerical reproduction and saved-answer inspection, not an independent replay of the original access-control audit.
